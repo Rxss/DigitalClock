@@ -5,6 +5,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 public class DigitalClock extends JFrame{
+    JFrame frame = new JFrame("Demo program for JFrame");
     Calendar calendar;
     SimpleDateFormat timeFormat;
     SimpleDateFormat dayFormat;
@@ -23,19 +24,21 @@ public class DigitalClock extends JFrame{
         this.setSize(450, 320);
         this.setResizable(false);
 
+
+
         timeFormat = new SimpleDateFormat("hh:mm:ss a");
         dayFormat=new SimpleDateFormat("EEEE");
         dateFormat=new SimpleDateFormat("dd MMMMM, yyyy");
         timeLabel = new JLabel();
-        timeLabel.setFont(new Font("SANS_SERIF", Font.PLAIN, 59));
-        timeLabel.setBackground(Color.BLACK);
-        timeLabel.setForeground(Color.WHITE);
+        timeLabel.setFont(new Font("SANS_SERIF", Font.PLAIN, 36));   // time
+        timeLabel.setBackground(Color.WHITE);  // background of clock
+        timeLabel.setForeground(Color.BLACK);  // color of numbers
         timeLabel.setOpaque(true);
         dayLabel=new JLabel();
-        dayLabel.setFont(new Font("Ink Free",Font.BOLD,34));
+        dayLabel.setFont(new Font("Georgia",Font.BOLD,64));
 
         dateLabel=new JLabel();
-        dateLabel.setFont(new Font("Ink Free",Font.BOLD,30));
+        dateLabel.setFont(new Font("Georgia",Font.BOLD,30));
 
 
         this.add(timeLabel);
